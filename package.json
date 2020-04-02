@@ -4,14 +4,18 @@
   "description": "Github battle",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "babel": {
     "presets": [
       "@babel/preset-env",
       "@babel/preset-react"
     ],
-    "plugins": ["@babel/plugin-proposal-class-properties"]
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "syntax-dynamic-import"
+    ]
   },
   "repository": {
     "type": "git",
@@ -25,6 +29,7 @@
   },
   "homepage": "https://github.com/Megathrone/github-battle#readme",
   "dependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "prop-types": "^15.7.2",
     "query-string": "^6.11.1",
     "react": "^16.13.1",
